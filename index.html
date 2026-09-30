@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+    <html lang="uk">
+        <head>
+            <meta charset="UTF-8">
+            <title>Film catalog by Bachysh</title>
+        </head>
+        <body>
+            <a href="#menu">До фільмів</a>
+            <header>
+                <p>
+                    <a href="#menu">
+                        <img src="img/logo.jpg" width="64" height="64" alt="logo">
+                        Фільми
+                    </a>
+                </p>
+
+                <nav aria-label="Навігація">
+                    <ul>
+                        <li><a href="#menu">Каталог фільмів</a></li>
+                        <li><a href="#film">Фільм</a></li>
+                        <li><a href="#add">Додати фільм</a></li>
+                    </ul>
+                </nav>
+
+                <search>
+                    <form action="#menu" method="get" role="search">
+                        <label for="search_field">Пошук фільмів</label>
+                        <input id="search_field" name="q" type="search" placeholder="Пошук фільму..." maxlength="80">
+                        <button type="submit">Знайти</button>
+                    </form>
+                </search>
+            </header>
+            <main>
+                <section id="menu" aria-labelledby="menu-title">
+                    <h1 id="menu-title">Фільми</h1>
+
+                    <nav aria-label="Категорії фільмів">
+                        <ul>
+                            <li><a href="#menu" aria-current="page">Комедія</a></li>
+                            <li><a href="#menu">Фантастика</a></li>
+                            <li><a href="#menu">Детектив</a></li>
+                            <li><a href="#menu">Хорор</a></li>
+                        </ul>
+                    </nav>
+
+                    <form action="#menu" method="get">
+                        <label for="sort">Сортувати</label>
+                        <select id="sort" name="sort">
+                            <option value="name" selected>За назвою</option>
+                            <option value="year-asc">За роком: спочатку старі</option>
+                            <option value="year-desc">За роком: спочатку нові</option>
+                            <option value="duration-asc">За тривалістю: спочатку короткі</option>
+                            <option value="duration-desc">За тривалістю: спочатку довгі</option>
+                        </select>
+                        <button type="submit">Застосувати</button>
+                    </form>
+                    <ul>
+                        <li>
+                            <article>
+                                <h2>
+                                    <a href="#film">Dumb and Dubmer</a>
+                                </h2>
+                                <p>
+                                    <img src="img/dumb_and_dumber.jpg" width="256" height="320" alt="dumb_and_dumber">
+                                </p>
+                                <p>Комедія</p>
+                                <p><data value="1994">1994 рік</data></p>
+                                <p><data value="113">113 хвилин</data></p>
+                                <p>Американська комедія про двох дурнуватих хлопців.</p>
+                                <p>Переглянуто</p>
+                                <p>
+                                    <a href="#film">Детальніше про фільм</a>
+                                    <button type="button">Додати фільм в обране</button>
+                                </p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <h2>
+                                    <a href="#film">Interstellar</a>
+                                </h2>
+                                <p>
+                                    <img src="img/intersteller.jpg" width="256" height="320" alt="film2">
+                                </p>
+                                <p>Фантастика</p>
+                                <p><data value="1992">2014 рік</data></p>
+                                <p><data value="169">169 хвилин</data></p>
+                                <p>Планета знаходиться на межі вимирання, тому в космос відправляється місія з врятування людства.</p>
+                                <p>Переглянуто</p>
+                                <p>
+                                    <a href="#film">Детальніше про фільм</a>
+                                    <button type="button">Додати фільм в обране</button>
+                                </p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <h2>
+                                    <a href="#film">Knives Out</a>
+                                </h2>
+                                <p>
+                                    <img src="img/knives_out.jpg" width="256" height="320" alt="Knives Out">
+                                </p>
+                                <p>Детектив</p>
+                                <p><data value="2019">2019 рік</data></p>
+                                <p><data value="130">130 хвилин</data></p>
+                                <p>Детектив святкує день народження, а зранку його знаходять мертвим.</p>
+                                <p>Не переглянуто</p>
+                                <p>
+                                    <a href="#film">Детальніше про фільм</a>
+                                    <button type="button">Додати фільм в обране</button>
+                                </p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <h2>
+                                    <a href="#film">Astral</a>
+                                </h2>
+                                <p>
+                                    <img src="img/astral.jpg" width="256" height="320" alt="Astral">
+                                </p>
+                                <p>Хорор</p>
+                                <p><data value="2010">2010 рік</data></p>
+                                <p><data value="103">103 хвилин</data></p>
+                                <p>Маленький хлопчик страждає від припадків, під час яких бачить потойбічний світ.</p>
+                                <p>Переглянуто</p>
+                                <p>
+                                    <a href="#film">Детальніше про фільм</a>
+                                    <button type="button">Додати фільм в обране</button>
+                                </p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <h2>
+                                    <a href="#film">The Matrix</a>
+                                </h2>
+                                <p>
+                                    <img src="img/the_matrix.jpg" width="256" height="320" alt="The Matrix">
+                                </p>
+                                <p>Фантастика</p>
+                                <p><data value="1999">1999 рік</data></p>
+                                <p><data value="136">136 хвилин</data></p>
+                                <p>Головний герой фільму - програміст, який виявляється у світі, де реальність виявляється ілюзією.</p>
+                                <p>Переглянуто</p>
+                                <p>
+                                    <a href="#film">Детальніше про фільм</a>
+                                    <button type="button">Додати фільм в обране</button>
+                                </p>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                <section id="film" aria-label="item-title">
+                    <h2 id="item-title">Деталі про кіно</h2>
+                    <p>
+                        <a href="#menu">До каталогу фільмів</a>
+                    </p>
+                    <nav aria-label="Навігаційне меню">
+                        <ol>
+                            <li><a href="#menu">Комедія</a></li>
+                            <li>Dumb and Dumber</li>
+                        </ol>
+                    </nav>
+                    <article>
+                        <h3>Dumb and Dumber</h3>
+                        <p>
+                            <img src="img/dumb_and_dumber.jpg" width="256" height="320" alt="dumb_and_dumber">
+                        </p>
+                        <p>Комедія</p>
+                        <p>Рік випуску: <data value="1994">1994 рік</data></p>
+                        <p>Тривалість:  <data value="113">113 хвилин</data></p>
+                        <p>Переглянуто</p>
+                        <h4>Сюжет</h4>
+                        <p>
+                            Американська комедія про двох дурнуватих хлопців. 
+                        </p>
+                        <button type="button">Переглянути</button>
+                        <button type="button">Редагувати</button>
+                        <button type="button">Видалити</button>
+                    </article>
+                </section>
+                <section id="add" aria-labelledby="add-title">
+                    <h2 id="add-title">Додати новий фільм</h2>
+                    <p>Заповніть всі поля, щоб додати фільм</p>
+
+                    <form action="#add" method="post">
+                    <fieldset>
+                    <legend>Дані про фільм</legend>
+
+                    <p>
+                        <label for="name">Назва</label>
+                        <input id="name" name="name" type="text" required maxlength="80" autocomplete="off"
+                        placeholder="Назва фільму">
+                    </p>
+
+                    <p>
+                        <label for="category">Жанр</label>
+                        <select id="category" name="category" required>
+                            <option value="">Оберіть жанр</option>
+                            <option value="comedy">Комедія</option>
+                            <option value="fantasy">Фантастика</option>
+                            <option value="detective">Детектив</option>
+                            <option value="horror">Хорор</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="year">Рік</label>
+                        <input id="year" name="year" type="number" required min="1900" max="3000" step="1" inputmode="numeric"
+                        placeholder="2026">
+                    </p>
+
+                    <p>
+                        <label for="duration">Тривалість фільму, хв.</label>
+                        <input id="duration" name="duration" type="number" required max="1440" placeholder="180" title="Вкажіть тривалість фільму (число)">
+                    </p>
+
+                    <p>
+                        <label for="image">Посилання на зображення</label>
+                        <input id="image" name="image" type="url" maxlength="2048" placeholder="https://">
+                    </p>
+
+                    <p>
+                        <label for="plot">Короткий опис сюжету</label>
+                        <textarea id="plot" name="plot" required maxlength="300" rows="4"
+                        placeholder="Короткий опис сюжету"></textarea>
+                    </p>
+
+                    <p>
+                        <label>
+                        <input id="watched" name="watched" type="checkbox" checked>
+                        Переглянуто
+                        </label>
+                    </p>
+                    </fieldset>
+                    <p>
+                        <button type="submit">Зберегти</button>
+                        <button type="reset">Скасувати</button>
+                    </p>
+                    </form>
+                </section>
+            </main>
+            <footer>
+                <p>Фільми</p>
+                <nav aria-label="Навігація">
+                    <ul>
+                        <li><a href="#menu">Каталог фільмів</a></li>
+                        <li><a href="#film">Фільм</a></li>
+                        <li><a href="#add">Додати фільм</a></li>
+                    </ul>
+                </nav>
+                <p>
+                    <small>© 2026 Фільми. Сторінка каталогу.</small>
+                </p>
+                <!--TODO-->
+            </footer>
+
+        </body>
+
+    </html>
