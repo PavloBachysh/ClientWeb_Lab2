@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <html lang="uk">
+        <head>
+            <meta charset="UTF-8">
+            <title>About project | by Bachysh</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="Деталі про проєкт 'Фільми'.">
+            <link rel="icon" href="favicon.ico" sizes="any">
+        </head>
+        <body>
+            <a href="index.html">До фільмів</a>
+            <header>
+                <p>
+                    <a href="index.html">
+                        <img src="favicon.ico" width="64" height="64" alt="logo">
+                        Фільми
+                    </a>
+                </p>
+
+                <nav aria-label="Основна навігація">
+                    <ul>
+                        <li><a href="index.html">Каталог фільмів</a></li>
+                        <li><a href="about.html" aria-current="page">Про проєкт</a></li>
+                    </ul>
+                </nav>
+
+                <search>
+                    <form action="index.html" method="get" role="search">
+                        <label for="search_field">Пошук фільмів</label>
+                        <input id="search_field" name="q" type="search" placeholder="Пошук фільму..." maxlength="80">
+                        <button type="submit">Знайти</button>
+                    </form>
+                </search>
+            </header>
+
+            <main id="content">
+                <h1>Про каталог фільмів</h1>
+                <p>Цей проєкт містить каталог фільмів.
+                    Мета проєкту - дати можливість користувачам переглядати інформацію про різні фільми, включаючи їхні назви, жанри, режисерів та інші деталі.
+                    А також, користувачі можуть шукати фільми за ключовими словами та переглядати деталі про конкретні фільми.
+                </p>
+
+                <section aria-labelledby="howto-title">
+                    <h2 id="howto-title">Як використовувати каталог фільмів</h2>
+                    <ol>
+                        <li>Відкрийте головну сторінку каталогу фільмів.</li>
+                        <li>Використовуйте навігаційне меню для перегляду різних категорій фільмів.</li>
+                        <li>Введіть ключові слова у поле пошуку, щоб знайти конкретний фільм.</li>
+                        <li>Натисніть на назву фільму, щоб переглянути його деталі.</li>
+                    </ol>
+                </section>
+
+                <section aria-labelledby="next-title">
+                    <h2 id="next-title">Можливості наступних робіт</h2>
+                    <ul>
+                        <li>Стильове оформлення сторінок за макетом.</li>
+                        <li>Динамічне наповнення сторінки деталей даними обраного фільму.</li>
+                        <li>Фільтрація і сортування меню без перезавантаження сторінки.</li>
+                        <li>Збереження обраних фільмів у браузері.</li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="video-title">
+                    <h2 id="video-title">Відео огляд проєкту</h2>
+                    <figure>
+                        <video controls preload="metadata" width="360" height="640" poster="images/review.jpg">
+                            <source src="media/review.webm" type="video/webm">
+                            <source src="media/review.mp4" type="video/mp4">
+                            <track kind="subtitles" src="media/review.vtt" srclang="uk" label="Українські субтитри" default>
+                            <p>
+                                Ваш браузер не підтримує відтворення відео. 
+                                Ви можете прочитати текстову версію <a href="#transcript">текстову версію огляду.</a>
+                            </p>
+                        </video>
+                        <figcaption>Відео огляд проєкту "Фільми".</figcaption>
+                    </figure>
+                    <!--TODO: Зробити НОРМАЛЬНЕ відео.-->
+                </section>
+
+                <section id="transcript" aria-labelledby="transcript-title">
+                    <h2 id="transcript-title">Текстова версія огляду</h2>
+                    <p>Цей проєкт містить каталог фільмів, який дозволяє користувачам переглядати інформацію про різні фільми, включаючи їхні назви, жанри, режисерів та інші деталі. Користувачі можуть шукати фільми за ключовими словами та переглядати деталі про конкретні фільми.</p>
+                    <p>На головній сторінці каталогу користувачі можуть переглядати список фільмів та використовувати навігаційне меню для переходу до різних категорій. Введення ключових слів у поле пошуку дозволяє швидко знаходити потрібні фільми.</p>
+                    <p>Натискання на назву фільму відкриває сторінку з детальною інформацією про обраний фільм. У наступних роботах планується додати стильове оформлення сторінок, динамічне наповнення сторíнки деталей даними обраного фíльму, а також можливість фíльтрацíї і сортування меню без перезавантаження сторíнки.</p>
+                </section>
+
+                <section aria-labelledby="faq-title">
+                    <h2 id="faq-title">Поширені запитання</h2>
+                    <details name="faq">
+                        <summary>Як відкрити опис фільму?</summary>
+                        <p>Щоб відкрити опис фільму, потрібно клікнути на назву фільму на головній сторінці каталогу.</p>
+                    </details>
+                    <details name="faq">
+                        <summary>Чому зараз усі картки ведуть на один опис?</summary>
+                        <p>На цьому етапі сторінка деталей спільна для каталогу. У наступній роботі з JavaScript її вміст підставлятиметься для кожної позиції окремо.</p>
+                    </details>
+                    <details name="faq">
+                        <summary>Як шукати фільми?</summary>
+                        <p>Щоб шукати фільми, потрібно ввести ключові слова у поле пошуку на головній сторінці каталогу та натиснути кнопку "Знайти".</p>
+                    </details>
+                    <details name="faq">
+                        <summary>Коли з'явиться оформлення?</summary>
+                        <p>Оформлення буде додано у наступній версії проєкту.</p>
+                    </details>
+                </section>
+
+                <section aria-labelledby="contact-title">
+                    <h2 id="contact-title">Контакти</h2>
+                    <address>
+                        <p>Автор проєкту: Павло Бачиш</p>
+                        <p>Якщо у вас є питання або пропозиції щодо проєкту, будь ласка, зв'яжіться з нами:</p>
+                        <ul>
+                            <li>Email: <a href="mailto:pbachysh@sumdu.edu.ua">pbachysh@sumdu.edu.ua</a></li>
+                        </ul>
+                    </address>
+                </section>
+            </main>
+
+            <footer>
+                <p>Фільми</p>
+                <nav aria-label="Основна навігація">
+                    <ul>
+                        <li><a href="index.html">Каталог фільмів</a></li>
+                        <li><a href="about.html" aria-current="page">Про проєкт</a></li>
+                    </ul>
+                </nav>
+                <p>
+                    <small>© 2026 Фільми. Сторінка каталогу.</small>
+                </p>
+            </footer>
+
+        </body>
+
+    </html>
