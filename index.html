@@ -85,7 +85,7 @@
                                     <img src="images/interstellar.jpg" width="256" height="320" alt="film2">
                                 </p>
                                 <p>Фантастика</p>
-                                <p><data value="1992">2014 рік</data></p>
+                                <p><data value="2014">2014 рік</data></p>
                                 <p><data value="169">169 хвилин</data></p>
                                 <p>Планета знаходиться на межі вимирання, тому в космос відправляється місія з врятування людства.</p>
                                 <p>Переглянуто</p>
@@ -159,14 +159,13 @@
                     <h2 id="add-title">Додати новий фільм</h2>
                     <p>Заповніть всі поля, щоб додати фільм</p>
 
-                    <form action="#add" method="post">
+                    <form action="#add" method="get">
                     <fieldset>
-                    <legend>Дані про фільм</legend>
+                    <legend>Основні дані про фільм</legend>
 
                     <p>
                         <label for="name">Назва</label>
-                        <input id="name" name="name" type="text" required maxlength="80" autocomplete="off"
-                        placeholder="Назва фільму">
+                        <input id="name" name="name" type="text" required maxlength="80" autocomplete="off">
                     </p>
 
                     <p>
@@ -182,24 +181,39 @@
 
                     <p>
                         <label for="year">Рік</label>
-                        <input id="year" name="year" type="number" required min="1900" max="3000" step="1" inputmode="numeric"
-                        placeholder="2026">
+                        <input id="year" name="year" type="number" required min="1900" max="3000" step="1" inputmode="numeric">
                     </p>
 
                     <p>
                         <label for="duration">Тривалість фільму, хв.</label>
-                        <input id="duration" name="duration" type="number" required max="1440" placeholder="180" title="Вкажіть тривалість фільму (число)">
+                        <input id="duration" name="duration" type="number" required max="1440" title="Вкажіть тривалість фільму (число)">
                     </p>
+                    </fieldset>
 
+                    <fieldset>
+                    <legend>Опис</legend>
                     <p>
-                        <label for="image">Посилання на зображення</label>
-                        <input id="image" name="image" type="url" maxlength="2048" placeholder="https://">
+                        <label for="image">Зображення</label>
+                        <input id="image" name="image" type="file" accept="image/svg+xml,image/webp,image/png" required>
+                        <p id="image-hint">Підтримувані формати: SVG, WebP, PNG</p>
                     </p>
 
                     <p>
                         <label for="plot">Короткий опис сюжету</label>
-                        <textarea id="plot" name="plot" required maxlength="300" rows="4"
-                        placeholder="Короткий опис сюжету"></textarea>
+                        <textarea id="plot" name="plot" required maxlength="300" rows="4"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="addedAt">Дата додавання</label>
+                        <input id="addedAt" name="addedAt" type="date" required min="2024-01-01" max="2027-12-31">
+                        <p id="addedAt-hint">Вкажіть дату додавання фільму на сайт (між 2024-01-01 та 2027-12-31)</p>
+                    </p>
+
+                    <p>
+                        <label for="code">Кодова назва</label>
+                        <input id="code" name="code" type="text" required pattern="^[A-Z]{4}-\d{2}$" maxlength="20"
+                        aria-describedby="code-hint" autocomplete="off" title="Вкажіть кодову назву у форматі ABCD-12">
+                        <p id="code-hint">Вкажіть кодову назву у форматі ABCD-12 (4 великі літери, дефіс, 2 цифри)</p>
                     </p>
 
                     <p>
@@ -214,7 +228,7 @@
                         <button type="reset">Скасувати</button>
                     </p>
                     </form>
-                </section>
+                </section>і
             </main>
             <footer>
                 <p>Фільми</p>
@@ -222,6 +236,7 @@
                     <ul>
                         <li><a href="index.html" aria-current="page">Каталог фільмів</a></li>
                         <li><a href="about.html">Про проєкт</a></li>
+                        <li><a href="admin.html">Адміністрування</a></li>
                     </ul>
                 </nav>
                 <p>
