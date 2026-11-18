@@ -80,12 +80,11 @@
 
                     <fieldset>
                     <legend>Опис</legend>
-                    <p>Поточне зображення: images/dumb_and_dumber.webp</p>
                     <p>
                         <label for="image">Зображення</label>
                         <input id="image" name="image" type="file" accept="image/svg+xml,image/webp,image/png" required>
-                        <p id="image-hint">Підтримувані формати: SVG, WebP, PNG. Поле файлу не зберігає попереднє значення.</p>
                     </p>
+                    <p id="image-hint">Підтримувані формати: SVG, WebP, PNG</p>
 
                     <p>
                         <label for="plot">Короткий опис сюжету</label>
@@ -94,20 +93,20 @@
 
                     <p>
                         <label for="addedAt">Дата додавання</label>
-                        <input id="addedAt" name="addedAt" type="date" required min="2024-01-01" max="2027-12-31" value="2026-11-17">
-                        <p id="addedAt-hint">Вкажіть дату додавання фільму на сайт (між 2024-01-01 та 2027-12-31)</p>
+                        <input id="addedAt" name="addedAt" type="date" required min="2024-01-01" max="2027-12-31">
                     </p>
+                    <p id="addedAt-hint">Вкажіть дату додавання фільму на сайт (між 2024-01-01 та 2027-12-31)</p>
 
                     <p>
                         <label for="code">Кодова назва</label>
                         <input id="code" name="code" type="text" required pattern="^[A-Z]{4}-\d{2}$" maxlength="20"
-                        aria-describedby="code-hint" autocomplete="off" title="Вкажіть кодову назву у форматі ABCD-12" value="DUMB-94">
-                        <p id="code-hint">Вкажіть кодову назву у форматі ABCD-12 (4 великі літери, дефіс, 2 цифри)</p>
+                        aria-describedby="code-hint" autocomplete="off" title="Вкажіть кодову назву у форматі ABCD-12">
                     </p>
+                    <p id="code-hint">Вкажіть кодову назву у форматі ABCD-12 (4 великі літери, дефіс, 2 цифри)</p>
 
                     <p>
                         <label>
-                        <input id="watched" name="watched" type="checkbox" checked value="true">
+                        <input id="watched" name="watched" type="checkbox" checked>
                         Переглянуто
                         </label>
                     </p>
