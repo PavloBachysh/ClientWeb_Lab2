@@ -175,6 +175,17 @@
                                 <p id="recomendation-hint">0 — не рекомендую, 5 — обов'язково подивитися.</p>
 
                                 <p>
+                                    <label for="review-with">З ким ви дивились фільм?</label>
+                                    <input list="review-with-list" id="review-with" name="with" required>
+                                    <datalist id="review-with-list">
+                                        <option value="Друзі">
+                                        <option value="Сім'я">
+                                        <option value="Партнер(ка)">
+                                        <option value="Самостійно">
+                                    </datalist>
+                                </p>
+
+                                <p>
                                     <label for="review-comment">Ваш відгук</label>
                                     <textarea id="review-comment" name="comment" minlength="10" maxlength="500" rows="4" aria-describedby="review-comment-hint"></textarea>
                                 </p>
@@ -204,6 +215,7 @@
                     <ul>
                         <li><a href="index.html">Каталог фільмів</a></li>
                         <li><a href="about.html">Про проєкт</a></li>
+                        <li><a href="admin.html">Адміністрування</a></li>
                     </ul>
                 </nav>
                 <p>
