@@ -1,192 +1,194 @@
 <!DOCTYPE html>
-    <html lang="uk">
-        <head>
-            <meta charset="UTF-8">
-            <title>Admin panel | by Bachysh</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="description" content="Адміністративна панель для керування фільмами на сайті.">
-            <link rel="icon" href="favicon.ico" sizes="any">
-        </head>
-        <body>
-            <a href="index.html">До фільмів</a>
-            <header>
-                <p>
-                    <a href="index.html">
-                        <img src="favicon.ico" width="64" height="64" alt="logo">
-                        Фільми
-                    </a>
-                </p>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin panel | by Bachysh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адміністративна панель для керування фільмами на сайті.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
 
-                <nav aria-label="Основна навігація">
-                    <ul>
-                        <li><a href="index.html">Каталог фільмів</a></li>
-                        <li><a href="about.html">Про проєкт</a></li>
-                    </ul>
-                </nav>
+  <header class="site-header">
+    <p class="site-header__brand">
+      <a class="site-header__logo" href="index.html">
+        <img src="favicon.ico" width="64" height="64" alt="KINO БАЗА logo">
+        <span>Фільми</span>
+      </a>
+    </p>
 
-                <search>
-                    <form action="index.html" method="get" role="search">
-                        <label for="search_field">Пошук фільмів</label>
-                        <input id="search_field" name="q" type="search" placeholder="Пошук фільму..." maxlength="80">
-                        <button type="submit">Знайти</button>
-                    </form>
-                </search>
-            </header>
+    <nav class="site-nav" aria-label="Основна навігація">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Каталог фільмів</a></li>
+        <li><a class="site-nav__link" href="about.html">Про проєкт</a></li>
+      </ul>
+    </nav>
 
+    <search>
+      <form class="site-search__form" action="index.html" method="get" role="search">
+        <label class="site-search__label" for="search_field">Пошук фільмів</label>
+        <input class="site-search__input" id="search_field" name="q" type="search" placeholder="Пошук фільму..." maxlength="80">
+        <button class="button button--primary" type="submit">Знайти</button>
+      </form>
+    </search>
+  </header>
 
-            <main id="content">
-                <h1>Адміністративна панель</h1>
-                <p>
-                    Ця сторінка — навчальна імітація адміністративного інтерфейсу.
-                    Посилання в підвалі і перевірка полів у браузері не захищають дані:
-                    контроль доступу та остаточна перевірка виконуються на сервері.
-                </p>
+  <main class="page" id="content">
+    <h1>Адміністративна панель</h1>
+    <p>
+      Ця сторінка — навчальна імітація адміністративного інтерфейсу.
+      Посилання в підвалі і перевірка полів у браузері не захищають дані:
+      контроль доступу та остаточна перевірка виконуються на сервері.
+    </p>
 
-                <section aria-labelledby="films-title">
-                    <h2 id="films-title">Фільми</h2>
-                    <p>Натисніть на фільм, щоб редагувати його.</p>
-                    <p>(На цьому етапі кожне посилання «Редагувати» відкриває одну навчальну форму)</p>
-                    <table>
-                        <caption>Список фільмів</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Назва</th>
-                                <th scope="col">Рік</th>
-                                <th scope="col">Жанр</th>
-                                <th scope="col">Тривалість</th>
-                                <th scope="col">Дія</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><a href="admin-edit.html">Dumb and Dumber</a></th>
-                                <td>1994</td>
-                                <td>Комедія</td>
-                                <td>113 хв</td>
-                                <td><a href="admin-edit.html">Редагувати</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="admin-edit.html">Interstellar</a></th>
-                                <td>2014</td>
-                                <td>Фантастика</td>
-                                <td>169 хв</td>
-                                <td><a href="admin-edit.html">Редагувати</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="admin-edit.html">Knives Out</a></th>
-                                <td>2019</td>
-                                <td>Детектив</td>
-                                <td>130 хв</td>
-                                <td><a href="admin-edit.html">Редагувати</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="admin-edit.html">Astral</a></th>
-                                <td>2010</td>
-                                <td>Хорор</td>
-                                <td>103 хв</td>
-                                <td><a href="admin-edit.html">Редагувати</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="admin-edit.html">The Matrix</a></th>
-                                <td>1999</td>
-                                <td>Фантастика</td>
-                                <td>136 хв</td>
-                                <td><a href="admin-edit.html">Редагувати</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+    <section aria-labelledby="films-title">
+      <h2 id="films-title">Фільми</h2>
+      <p>Натисніть на фільм, щоб редагувати його.</p>
+      <p>(На цьому етапі кожне посилання «Редагувати» відкриває одну навчальну форму)</p>
 
-                <section aria-labelledby="add-title">
-                    <h2 id="add-title">Додати новий фільм</h2>
-                    <p>Заповніть всі поля, щоб додати фільм</p>
+      <table class="data-table">
+        <caption>Список фільмів</caption>
+        <thead>
+          <tr>
+            <th scope="col">Назва</th>
+            <th scope="col">Рік</th>
+            <th scope="col">Жанр</th>
+            <th scope="col">Тривалість</th>
+            <th scope="col">Дія</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><a href="admin-edit.html">Dumb and Dumber</a></th>
+            <td class="data-table__number"><data value="1994">1994</data></td>
+            <td>Комедія</td>
+            <td class="data-table__number"><data value="113">113 хв</data></td>
+            <td><a class="button button--secondary" href="admin-edit.html">Редагувати</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="admin-edit.html">Interstellar</a></th>
+            <td class="data-table__number"><data value="2014">2014</data></td>
+            <td>Фантастика</td>
+            <td class="data-table__number"><data value="169">169 хв</data></td>
+            <td><a class="button button--secondary" href="admin-edit.html">Редагувати</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="admin-edit.html">Knives Out</a></th>
+            <td class="data-table__number"><data value="2019">2019</data></td>
+            <td>Детектив</td>
+            <td class="data-table__number"><data value="130">130 хв</data></td>
+            <td><a class="button button--secondary" href="admin-edit.html">Редагувати</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="admin-edit.html">Astral</a></th>
+            <td class="data-table__number"><data value="2010">2010</data></td>
+            <td>Хорор</td>
+            <td class="data-table__number"><data value="103">103 хв</data></td>
+            <td><a class="button button--secondary" href="admin-edit.html">Редагувати</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><a href="admin-edit.html">The Matrix</a></th>
+            <td class="data-table__number"><data value="1999">1999</data></td>
+            <td>Фантастика</td>
+            <td class="data-table__number"><data value="136">136 хв</data></td>
+            <td><a class="button button--secondary" href="admin-edit.html">Редагувати</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-                    <form id="add-film" action="admin.html" method="get">
-                    <fieldset>
-                    <legend>Основні дані про фільм</legend>
+    <section aria-labelledby="add-title">
+      <h2 id="add-title">Додати новий фільм</h2>
+      <p>Заповніть всі поля, щоб додати фільм</p>
 
-                    <p>
-                        <label for="name">Назва</label>
-                        <input id="name" name="name" type="text" required maxlength="80" autocomplete="off">
-                    </p>
+      <form class="form" id="add-film" action="admin.html" method="get">
+        <fieldset class="form__group">
+          <legend class="form__legend">Основні дані про фільм</legend>
 
-                    <p>
-                        <label for="category">Жанр</label>
-                        <select id="category" name="category" required>
-                            <option value="">Оберіть жанр</option>
-                            <option value="comedy">Комедія</option>
-                            <option value="fantasy">Фантастика</option>
-                            <option value="detective">Детектив</option>
-                            <option value="horror">Хорор</option>
-                        </select>
-                    </p>
+          <p class="form__field">
+            <label class="form__label" for="name">Назва</label>
+            <input id="name" name="name" type="text" required maxlength="80" autocomplete="off">
+          </p>
 
-                    <p>
-                        <label for="year">Рік</label>
-                        <input id="year" name="year" type="number" required min="1900" max="3000" step="1" inputmode="numeric">
-                    </p>
+          <p class="form__field">
+            <label class="form__label" for="category">Жанр</label>
+            <select id="category" name="category" required>
+              <option value="">Оберіть жанр</option>
+              <option value="comedy">Комедія</option>
+              <option value="fantasy">Фантастика</option>
+              <option value="detective">Детектив</option>
+              <option value="horror">Хорор</option>
+            </select>
+          </p>
 
-                    <p>
-                        <label for="duration">Тривалість фільму, хв.</label>
-                        <input id="duration" name="duration" type="number" required max="1440" title="Вкажіть тривалість фільму (число)">
-                    </p>
-                    </fieldset>
+          <p class="form__field">
+            <label class="form__label" for="year">Рік</label>
+            <input id="year" name="year" type="number" required min="1900" max="3000" step="1" inputmode="numeric">
+          </p>
 
-                    <fieldset>
-                    <legend>Опис</legend>
-                    <p>
-                        <label for="image">Зображення</label>
-                        <input id="image" name="image" type="file" accept="image/svg+xml,image/webp,image/png" required>
-                    </p>
-                    <p id="image-hint">Підтримувані формати: SVG, WebP, PNG</p>
+          <p class="form__field">
+            <label class="form__label" for="duration">Тривалість фільму, хв.</label>
+            <input id="duration" name="duration" type="number" required max="1440" min="1" title="Вкажіть тривалість фільму (число)">
+          </p>
+        </fieldset>
 
-                    <p>
-                        <label for="plot">Короткий опис сюжету</label>
-                        <textarea id="plot" name="plot" required maxlength="300" rows="4"></textarea>
-                    </p>
+        <fieldset class="form__group">
+          <legend class="form__legend">Опис</legend>
 
-                    <p>
-                        <label for="addedAt">Дата додавання</label>
-                        <input id="addedAt" name="addedAt" type="date" required min="2024-01-01" max="2027-12-31">
-                    </p>
-                    <p id="addedAt-hint">Вкажіть дату додавання фільму на сайт (між 2024-01-01 та 2027-12-31)</p>
+          <p class="form__field">
+            <label class="form__label" for="image">Зображення</label>
+            <input id="image" name="image" type="file" accept="image/svg+xml,image/webp,image/png" required>
+          </p>
+          <p class="form__hint" id="image-hint">Підтримувані формати: SVG, WebP, PNG</p>
 
-                    <p>
-                        <label for="code">Кодова назва</label>
-                        <input id="code" name="code" type="text" required pattern="^[A-Z]{4}-\d{2}$" maxlength="20"
-                        aria-describedby="code-hint" autocomplete="off" title="Вкажіть кодову назву у форматі ABCD-12">
-                    </p>
-                    <p id="code-hint">Вкажіть кодову назву у форматі ABCD-12 (4 великі літери, дефіс, 2 цифри)</p>
+          <p class="form__field">
+            <label class="form__label" for="plot">Короткий опис сюжету</label>
+            <textarea id="plot" name="plot" required maxlength="300" rows="4"></textarea>
+          </p>
 
-                    <p>
-                        <label>
-                        <input id="watched" name="watched" type="checkbox" checked>
-                        Переглянуто
-                        </label>
-                    </p>
-                    </fieldset>
-                    <p>
-                        <button type="submit">Зберегти</button>
-                        <button type="reset">Скасувати</button>
-                    </p>
-                    </form>
-                </section>
+          <p class="form__field">
+            <label class="form__label" for="addedAt">Дата додавання</label>
+            <input id="addedAt" name="addedAt" type="date" required min="2024-01-01" max="2027-12-31">
+          </p>
+          <p class="form__hint" id="addedAt-hint">Вкажіть дату додавання фільму на сайт (між 2024-01-01 та 2027-12-31)</p>
 
-            </main>
+          <p class="form__field">
+            <label class="form__label" for="code">Кодова назва</label>
+            <input id="code" name="code" type="text" required pattern="^[A-Z]{4}-\d{2}$" maxlength="20"
+              aria-describedby="code-hint" autocomplete="off" title="Вкажіть кодову назву у форматі ABCD-12">
+          </p>
+          <p class="form__hint" id="code-hint">Вкажіть кодову назву у форматі ABCD-12 (4 великі літери, дефіс, 2 цифри)</p>
 
-            <footer>
-                <p>Фільми</p>
-                <nav aria-label="Основна навігація">
-                    <ul>
-                        <li><a href="index.html">Каталог фільмів</a></li>
-                        <li><a href="about.html">Про проєкт</a></li>
-                        <li><a href="admin.html" aria-current="page">Адміністрування</a></li>
-                    </ul>
-                </nav>
-                <p>
-                    <small>© 2026 Фільми. Сторінка каталогу.</small>
-                </p>
-            </footer>
-        </body>
-    </html>
-    
+          <p class="form__field form__field--choice">
+            <label class="form__label" for="watched">
+              <input id="watched" name="watched" type="checkbox" checked>
+              Переглянуто
+            </label>
+          </p>
+        </fieldset>
+
+        <p class="form__actions">
+          <button class="button button--primary" type="submit">Зберегти</button>
+          <button class="button button--secondary" type="reset">Скасувати</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__title">Фільми</p>
+    <nav aria-label="Основна навігація у підвалі">
+      <ul class="site-footer__list">
+        <li><a class="site-footer__link" href="index.html">Каталог фільмів</a></li>
+        <li><a class="site-footer__link" href="about.html">Про проєкт</a></li>
+        <li><a class="site-footer__link" href="admin.html" aria-current="page">Адміністрування</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copy">
+      <small>© 2026 Фільми. Сторінка каталогу.</small>
+    </p>
+  </footer>
+</body>
+</html>
