@@ -322,6 +322,10 @@
     color: var(--color-on-accent);
   }
 
+  .site-search {
+    flex-shrink: 0;
+  }
+
   .site-search__form {
     display: grid;
     grid-template-columns: minmax(12rem, 16rem) auto;
@@ -775,9 +779,9 @@
   }
 
   .data-table thead th {
-    border-bottom-width: 2px;
-    background: var(--color-text);
-    color: var(--color-bg);
+    border-bottom: 2px solid var(--color-accent);
+    background: var(--color-row);
+    color: var(--color-text);
     font-weight: 700;
     white-space: nowrap;
   }
@@ -791,7 +795,6 @@
   }
 
   .data-table__number {
-    text-align: end;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
