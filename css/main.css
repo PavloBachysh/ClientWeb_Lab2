@@ -1059,12 +1059,18 @@
     box-shadow: var(--shadow-card);
   }
 
-  /* Форми адміністратора і відвідувача. */
+  /*
+    Форма — сітка полів. auto-fill ставить кілька стовпців на широкому екрані
+    і один на вузькому. Поле з підказкою, багаторядковий опис, прапорець,
+    група і кнопки займають усю ширину, тож підказка лишається під своїм полем.
+  */
+
   .form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
     gap: var(--space-m);
-    max-inline-size: 38rem;
+    inline-size: 100%;
+    min-inline-size: 0;
     padding: var(--space-l);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-m);
@@ -1073,15 +1079,26 @@
   }
 
   .form__group {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
     gap: var(--space-m);
+    grid-column: 1 / -1;
     min-inline-size: 0;
     margin: 0;
     padding: var(--space-m);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-m);
     background: var(--color-bg);
+  }
+
+  .form__legend,
+  .form__note,
+  .form__hint,
+  .form__actions,
+  .form__field:has(textarea),
+  .form__field--choice,
+  .form__field:has(+ .form__hint) {
+    grid-column: 1 / -1;
   }
 
   .form__choices {
