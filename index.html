@@ -39,28 +39,55 @@
     <section id="menu" aria-labelledby="menu-title">
       <h1 id="menu-title">Фільми</h1>
 
-      <nav class="catalog-filters" aria-label="Категорії фільмів">
-        <ul class="catalog-filters__list">
-          <li><a class="catalog-filters__link" href="index.html" aria-current="page">Комедія</a></li>
-          <li><a class="catalog-filters__link" href="index.html">Фантастика</a></li>
-          <li><a class="catalog-filters__link" href="index.html">Детектив</a></li>
-          <li><a class="catalog-filters__link" href="index.html">Хорор</a></li>
-        </ul>
-      </nav>
+<form class="filters" action="index.html" method="get">
+        <p class="filters__field">
+          <label class="filters__label" for="filter-q">Пошук за назвою</label>
+          <input class="filters__control" id="filter-q" name="q" type="search" placeholder="Наприклад, Interstellar...">
+        </p>
 
-      <form class="catalog-sort" action="index.html" method="get">
-        <label class="catalog-sort__label" for="sort">Сортувати</label>
-        <select class="catalog-sort__select" id="sort" name="sort">
-          <option value="name" selected>За назвою</option>
-          <option value="year-asc">За роком: спочатку старі</option>
-          <option value="year-desc">За роком: спочатку нові</option>
-          <option value="duration-asc">За тривалістю: спочатку короткі</option>
-          <option value="duration-desc">За тривалістю: спочатку довгі</option>
-        </select>
-        <button class="button button--primary" type="submit">Застосувати</button>
+        <p class="filters__field">
+          <label class="filters__label" for="sort">Сортувати</label>
+          <select class="filters__control" id="sort" name="sort">
+            <option value="name" selected>За назвою</option>
+            <option value="year-asc">За роком: спочатку старі</option>
+            <option value="year-desc">За роком: спочатку нові</option>
+            <option value="duration-asc">За тривалістю: спочатку короткі</option>
+            <option value="duration-desc">За тривалістю: спочатку довгі</option>
+          </select>
+        </p>
+
+        <fieldset class="filters__categories">
+          <legend class="filters__legend">Жанр</legend>
+          <div class="chips">
+            <label class="chip">
+              <input class="chip__input" type="radio" name="category" value="all" checked>
+              Усі
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="category" value="comedy">
+              Комедія
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="category" value="fantasy">
+              Фантастика
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="category" value="detective">
+              Детектив
+            </label>
+            <label class="chip">
+              <input class="chip__input" type="radio" name="category" value="horror">
+              Хорор
+            </label>
+          </div>
+        </fieldset>
+
+        <p class="filters__field filters__field--action">
+          <button class="button button--primary" type="submit">Застосувати</button>
+        </p>
       </form>
 
-      <ul class="catalog__list">
+<ul class="catalog__list">
         <li class="catalog__item">
           <article class="card card--watched">
             <h2 class="card__title">
@@ -69,13 +96,15 @@
             <p class="card__media">
               <img src="images/dumb_and_dumber.jpg" width="256" height="320" alt="dumb_and_dumber">
             </p>
-            <p class="card__top-meta">
+            <div class="card__top-meta">
               <p class="card__genre">Комедія</p>
+              <p class="card__year"><data value="1994">1994 рік</data></p>
+            </div>
+            <p class="card__description">Американська комедія про двох нерозлучних друзів, які вирушають у подорож.</p>
+            <div class="card__footer">
               <p class="card__duration"><data value="113">113 хвилин</data></p>
-            </p>
-            <p class="card__year"><data value="1994">1994 рік</data></p>
-            <p class="card__description">Американська комедія про двох дурнуватих хлопців.</p>
-            <p class="status status--watched">Переглянуто</p>
+              <p class="status status--watched">Переглянуто</p>
+            </div>
             <p class="card__actions">
               <a class="button button--secondary" href="details.html">Детальніше про фільм</a>
               <button class="button button--primary" type="button">Додати фільм в обране</button>
@@ -91,13 +120,15 @@
             <p class="card__media">
               <img src="images/interstellar.jpg" width="256" height="320" alt="film2">
             </p>
-            <p class="card__top-meta">
+            <div class="card__top-meta">
               <p class="card__genre">Фантастика</p>
-              <p class="card__duration"><data value="169">169 хвилин</data></p>
-            </p>
-            <p class="card__year"><data value="2014">2014 рік</data></p>
+              <p class="card__year"><data value="2014">2014 рік</data></p>
+            </div>
             <p class="card__description">Планета знаходиться на межі вимирання, тому в космос відправляється місія з врятування людства.</p>
-            <p class="status status--watched">Переглянуто</p>
+            <div class="card__footer">
+              <p class="card__duration"><data value="169">169 хвилин</data></p>
+              <p class="status status--watched">Переглянуто</p>
+            </div>
             <p class="card__actions">
               <a class="button button--secondary" href="details.html">Детальніше про фільм</a>
               <button class="button button--primary" type="button">Додати фільм в обране</button>
@@ -113,13 +144,15 @@
             <p class="card__media">
               <img src="images/knives_out.jpg" width="256" height="320" alt="Knives Out">
             </p>
-            <p class="card__top-meta">
+            <div class="card__top-meta">
               <p class="card__genre">Детектив</p>
-              <p class="card__duration"><data value="130">130 хвилин</data></p>
-            </p>
-            <p class="card__year"><data value="2019">2019 рік</data></p>
+              <p class="card__year"><data value="2019">2019 рік</data></p>
+            </div>
             <p class="card__description">Детектив святкує день народження, а зранку його знаходять мертвим.</p>
-            <p class="status status--unwatched">Не переглянуто</p>
+            <div class="card__footer">
+              <p class="card__duration"><data value="130">130 хвилин</data></p>
+              <p class="status status--unwatched">Не переглянуто</p>
+            </div>
             <p class="card__actions">
               <a class="button button--secondary" href="details.html">Детальніше про фільм</a>
               <button class="button button--primary" type="button">Додати фільм в обране</button>
@@ -135,13 +168,15 @@
             <p class="card__media">
               <img src="images/astral.jpg" width="256" height="320" alt="Astral">
             </p>
-            <p class="card__top-meta">
+            <div class="card__top-meta">
               <p class="card__genre">Хорор</p>
-              <p class="card__duration"><data value="103">103 хвилин</data></p>
-            </p>
-            <p class="card__year"><data value="2010">2010 рік</data></p>
+              <p class="card__year"><data value="2010">2010 рік</data></p>
+            </div>
             <p class="card__description">Маленький хлопчик страждає від припадків, під час яких бачить потойбічний світ.</p>
-            <p class="status status--watched">Переглянуто</p>
+            <div class="card__footer">
+              <p class="card__duration"><data value="103">103 хвилин</data></p>
+              <p class="status status--watched">Переглянуто</p>
+            </div>
             <p class="card__actions">
               <a class="button button--secondary" href="details.html">Детальніше про фільм</a>
               <button class="button button--primary" type="button">Додати фільм в обране</button>
@@ -157,13 +192,15 @@
             <p class="card__media">
               <img src="images/the_matrix.jpg" width="256" height="320" alt="The Matrix">
             </p>
-            <p class="card__top-meta">
+            <div class="card__top-meta">
               <p class="card__genre">Фантастика</p>
-              <p class="card__duration"><data value="136">136 хвилин</data></p>
-            </p>
-            <p class="card__year"><data value="1999">1999 рік</data></p>
+              <p class="card__year"><data value="1999">1999 рік</data></p>
+            </div>
             <p class="card__description">Головний герой фільму - програміст, який виявляється у світі, де реальність виявляється ілюзією.</p>
-            <p class="status status--watched">Переглянуто</p>
+            <div class="card__footer">
+              <p class="card__duration"><data value="136">136 хвилин</data></p>
+              <p class="status status--watched">Переглянуто</p>
+            </div>
             <p class="card__actions">
               <a class="button button--secondary" href="details.html">Детальніше про фільм</a>
               <button class="button button--primary" type="button">Додати фільм в обране</button>

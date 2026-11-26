@@ -26,7 +26,7 @@
       </ul>
     </nav>
 
-    <search>
+    <search class="site-search">
       <form class="site-search__form" action="index.html" method="get" role="search">
         <label class="site-search__label" for="search_field">Пошук фільмів</label>
         <input class="site-search__input" id="search_field" name="q" type="search" placeholder="Пошук фільму..." maxlength="80">
@@ -53,7 +53,7 @@
 
         <nav class="toc" aria-label="На цій сторінці">
           <h2>На цій сторінці</h2>
-          <ul>
+          <ul class="toc__list">
             <li><a href="#item-photo">Фото</a></li>
             <li><a href="#item-short-plot">Короткий сюжет</a></li>
             <li><a href="#item-description">Опис</a></li>
@@ -98,17 +98,25 @@
         <section id="item-description" aria-labelledby="item-description-title">
           <h2 id="item-description-title">Опис</h2>
           <dl class="specs">
-            <dt class="specs__term">Жанр</dt>
-            <dd class="specs__value">Комедія</dd>
+            <div class="specs__pair">
+              <dt class="specs__term">Жанр</dt>
+              <dd class="specs__value">Комедія</dd>
+            </div>
 
-            <dt class="specs__term">Рік випуску</dt>
-            <dd class="specs__value"><data value="1994">1994 рік</data></dd>
+            <div class="specs__pair">
+              <dt class="specs__term">Рік випуску</dt>
+              <dd class="specs__value"><data value="1994">1994 рік</data></dd>
+            </div>
 
-            <dt class="specs__term">Тривалість</dt>
-            <dd class="specs__value"><data value="113">113 хвилин</data></dd>
+            <div class="specs__pair">
+              <dt class="specs__term">Тривалість</dt>
+              <dd class="specs__value"><data value="113">113 хвилин</data></dd>
+            </div>
 
-            <dt class="specs__term">Стан</dt>
-            <dd class="specs__value"><span class="status status--watched">Переглянуто</span></dd>
+            <div class="specs__pair">
+              <dt class="specs__term">Стан</dt>
+              <dd class="specs__value"><span class="status status--watched">Переглянуто</span></dd>
+            </div>
           </dl>
         </section>
 
@@ -162,21 +170,23 @@
 
             <fieldset class="form__group">
               <legend class="form__legend">Ваша оцінка</legend>
-              <p class="form__field form__field--choice">
-                <label class="form__label"><input type="radio" name="rating" value="1" required> 1</label>
-              </p>
-              <p class="form__field form__field--choice">
-                <label class="form__label"><input type="radio" name="rating" value="2"> 2</label>
-              </p>
-              <p class="form__field form__field--choice">
-                <label class="form__label"><input type="radio" name="rating" value="3"> 3</label>
-              </p>
-              <p class="form__field form__field--choice">
-                <label class="form__label"><input type="radio" name="rating" value="4"> 4</label>
-              </p>
-              <p class="form__field form__field--choice">
-                <label class="form__label"><input type="radio" name="rating" value="5"> 5</label>
-              </p>
+              <div class="form__choices">
+                <p class="form__field form__field--choice">
+                  <label class="form__label"><input type="radio" name="rating" value="1" required> 1</label>
+                </p>
+                <p class="form__field form__field--choice">
+                  <label class="form__label"><input type="radio" name="rating" value="2"> 2</label>
+                </p>
+                <p class="form__field form__field--choice">
+                  <label class="form__label"><input type="radio" name="rating" value="3"> 3</label>
+                </p>
+                <p class="form__field form__field--choice">
+                  <label class="form__label"><input type="radio" name="rating" value="4"> 4</label>
+                </p>
+                <p class="form__field form__field--choice">
+                  <label class="form__label"><input type="radio" name="rating" value="5"> 5</label>
+                </p>
+              </div>
             </fieldset>
 
             <p class="form__field">
