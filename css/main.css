@@ -229,6 +229,29 @@
     color: var(--color-on-accent);
   }
 
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    min-block-size: 100dvh;
+  }
+
+  .site-header {
+    grid-area: header;
+  }
+
+  .page {
+    grid-area: main;
+  }
+
+  .site-footer {
+    grid-area: footer;
+  }
+
   /* Шапка: логотип, навігація і пошук на всіх сторінках. */
   .site-header {
     display: flex;
