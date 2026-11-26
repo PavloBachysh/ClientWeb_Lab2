@@ -229,11 +229,35 @@
     color: var(--color-on-accent);
   }
 
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    min-block-size: 100dvh;
+  }
+
+  .site-header {
+    grid-area: header;
+  }
+
+  .page {
+    grid-area: main;
+  }
+
+  .site-footer {
+    grid-area: footer;
+  }
+
   /* Шапка: логотип, навігація і пошук на всіх сторінках. */
   .site-header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    min-inline-size: 0;
     gap: var(--space-m) var(--space-l);
     padding: var(--space-m) var(--space-l);
     border-bottom: 1px solid var(--color-border);
@@ -441,6 +465,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    min-inline-size: 0;
     gap: var(--space-m) var(--space-l);
     padding: var(--space-l);
     border-top: 1px solid var(--color-border);
