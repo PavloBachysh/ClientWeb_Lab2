@@ -891,7 +891,7 @@
   }
 
   .item-layout {
-    display: content;
+    display: contents;
   }
 
   .item > h1,
@@ -907,7 +907,7 @@
   }
 
   .item-photo {
-    margin-block: var(--space-l);
+    margin-block: 0;
   }
 
   .item-photo figure {
@@ -916,7 +916,6 @@
 
   .item-photo img {
     border-radius: var(--radius-m);
-    max-inline-size: 40rem;
     box-shadow: var(--shadow-card);
   }
 
