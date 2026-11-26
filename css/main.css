@@ -578,8 +578,26 @@
 
   .catalog__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
     gap: var(--space-l);
+  }
+
+  .catalog__item {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    min-inline-size: 0;
+  }
+
+  .catalog__empty {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: var(--space-l);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-m);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    text-align: center;
   }
 
 /* Картка фільму або серіалу. */
@@ -628,7 +646,7 @@
     overflow: hidden;
     border-radius: var(--radius-s);
     background: var(--color-row);
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 210 / 320;
   }
 
   .card__media img {
